@@ -2,7 +2,8 @@ import Component from "@glimmer/component";
 import DiscoveryTopicsList from "discourse/components/discovery-topics-list";
 import SearchBanner from "discourse/components/search-banner";
 import WhosOnline from "discourse/components/whos-online";
-import { htmlSafe } from "@ember/string"; // <-- THIS IS THE FIX
+import { htmlSafe } from "@ember/string";
+import { concat } from '@ember/helper';
 
 export default class CustomHomepage extends Component {
   <template>
