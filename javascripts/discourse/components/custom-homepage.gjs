@@ -3,13 +3,13 @@ import DiscoveryTopicsList from "discourse/components/discovery-topics-list";
 import SearchBanner from "discourse/components/search-banner";
 import WhosOnline from "discourse/components/whos-online";
 import { htmlSafe } from "@ember/string";
-import { concat } from '@ember/helper';
+import { concat, hash } from '@ember/helper'; // <-- FINAL FIX
 import { service } from "@ember/service";
 
 export default class CustomHomepage extends Component {
   @service site;
 
-  // This is a more robust way to get asset URLs without relying on the theme-prefix helper.
+  // This is a robust way to get asset URLs without relying on the theme-prefix helper.
   get assetUrls() {
     const themeId = this.site.currentTheme.id;
     const settings = this.site.themeSettings;
