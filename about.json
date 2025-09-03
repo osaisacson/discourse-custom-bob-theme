@@ -1,20 +1,13 @@
 {
-  "name": "Byggboihop Customizations",
-  "component": true,
-  "license_url": "https://github.com/discourse/discourse-theme-skeleton/blob/master/LICENSE",
-  "about_url": "https://meta.discourse.org/t/discourse-theme-skeleton/96750",
-  "authors": "Åsa Isacson",
-  "theme_version": "1.0",
+  "name": "discourse-byggboihop-theme",
+  "authors": "Osa Isacson",
+  "about_url": "",
+  "theme_version": "0.0.1",
   "modifiers": {
-    "custom_homepage": "true"
-  },
-  "assets": {
-    "hero-image": "assets/hero-image.jpg",
-    "map-card": "assets/map-card.jpg",
-    "projekt-card": "assets/projekt-card.jpg",
-    "mark-card": "assets/mark-card.jpg",
-    "hitta-card": "assets/hitta-card.jpg",
-    "go-med-card": "assets/go-med-card.jpeg",
-    "biblioteket-card": "assets/biblioteket-card.jpg"
+    "custom_homepage": "true",
+    "serialize_topic_excerpts": "true",
+    "topic_thumbnail_sizes": [
+      [400, 400]
+    ]
   }
 }
