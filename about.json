@@ -8,13 +8,6 @@
   "modifiers": {
     "custom_homepage": "true"
   },
-  "settings": [
-    {
-      "setting": "show_custom_homepage",
-      "default": true,
-      "type": "bool"
-    }
-  ],
   "assets": {
     "hero-image": "assets/hero-image.jpg",
     "map-card": "assets/map-card.jpg",
