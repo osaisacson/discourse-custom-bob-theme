@@ -1,9 +1,8 @@
 import Component from "@glimmer/component";
 import DiscoveryTopicsList from "discourse/components/discovery-topics-list";
-import SearchBanner from "discourse/components/search-banner";
 import WhosOnline from "discourse/plugins/discourse-whos-online/discourse/components/whos-online";
 import { htmlSafe } from "@ember/string";
-import { concat, hash } from '@ember/helper'; // <-- FINAL FIX
+import { concat, hash } from '@ember/helper';
 import { service } from "@ember/service";
 export default class CustomHomepage extends Component {
 
@@ -22,8 +21,8 @@ export default class CustomHomepage extends Component {
       </section>
 
       <section class="homepage-search-container">
-        <SearchBanner @options={{hash placeholder="Sök bland allt"}} />
-      </section>
+Search goes here     
+ </section>
 
       <div class="main-content-grid">
         
