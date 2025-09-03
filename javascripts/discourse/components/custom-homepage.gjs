@@ -2,12 +2,13 @@ import Component from "@glimmer/component";
 import DiscoveryTopicsList from "discourse/components/discovery-topics-list";
 import SearchBanner from "discourse/components/search-banner";
 import WhosOnline from "discourse/components/whos-online";
+import { htmlSafe } from "@ember/string"; // <-- THIS IS THE FIX
 
 export default class CustomHomepage extends Component {
   <template>
     <div class="custom-homepage-wrapper">
       {{! Hero Section }}
-      <section class="hero-section" style={{html-safe (concat "background-image: url(" (theme-prefix "assets/hero-image.jpg") ");")}}>
+      <section class="hero-section" style={{htmlSafe (concat "background-image: url(" (theme-prefix "assets/hero-image.jpg") ");")}}>
         <div class="hero-content">
           <h1>Välkommen till Sveriges idéburna byggrörelse</h1>
           <p>Här kan du se färdiga och planerade projekt, hitta kunskap och få kontakt med andra som bygger och bor ihop över hela landet.</p>
