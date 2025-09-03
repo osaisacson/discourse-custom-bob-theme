@@ -1,1 +1,1 @@
-# Discourse Sample Custom Homepage
+# Discourse BOB Theme

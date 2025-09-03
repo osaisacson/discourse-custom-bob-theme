@@ -19,6 +19,7 @@ export default class CustomHomepage extends Component {
         <div class="whos-online-container">
           <WhosOnline />
         </div>
+
       </section>
 
       <section class="homepage-search-container">
