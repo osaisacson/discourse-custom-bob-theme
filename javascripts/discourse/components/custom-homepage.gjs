@@ -4,12 +4,36 @@ import SearchBanner from "discourse/components/search-banner";
 import WhosOnline from "discourse/components/whos-online";
 import { htmlSafe } from "@ember/string";
 import { concat } from '@ember/helper';
+import { service } from "@ember/service";
 
 export default class CustomHomepage extends Component {
+  @service site;
+
+  // This is a more robust way to get asset URLs without relying on the theme-prefix helper.
+  get assetUrls() {
+    const themeId = this.site.currentTheme.id;
+    const settings = this.site.themeSettings;
+    const getURL = (assetName) => settings[`${themeId}_${assetName}`];
+
+    return {
+      heroImage: getURL("hero-image"),
+      mapCard: getURL("map-card"),
+      projektCard: getURL("projekt-card"),
+      markCard: getURL("mark-card"),
+      hittaCard: getURL("hitta-card"),
+      goMedCard: getURL("go-med-card"),
+      biblioteketCard: getURL("biblioteket-card"),
+    };
+  }
+
+  get heroStyle() {
+    return htmlSafe(`background-image: url(${this.assetUrls.heroImage});`);
+  }
+
   <template>
     <div class="custom-homepage-wrapper">
       {{! Hero Section }}
-      <section class="hero-section" style={{htmlSafe (concat "background-image: url(" (theme-prefix "assets/hero-image.jpg") ");")}}>
+      <section class="hero-section" style={{this.heroStyle}}>
         <div class="hero-content">
           <h1>Välkommen till Sveriges idéburna byggrörelse</h1>
           <p>Här kan du se färdiga och planerade projekt, hitta kunskap och få kontakt med andra som bygger och bor ihop över hela landet.</p>
@@ -30,39 +54,39 @@ export default class CustomHomepage extends Component {
         {{! Column 1: Left side cards }}
         <aside class="left-column">
           <a href="/c/gemenskaper/5/l/map?order=created" class="info-card" id="map-card">
-            <img src={{theme-prefix "assets/map-card.jpg"}} alt="Karta över gemenskaper">
+            <img src={{this.assetUrls.mapCard}} alt="Karta över gemenskaper">
           </a>
           
           <a href="/tag/hitta-medlemmar" class="info-card">
-            <img src={{theme-prefix "assets/projekt-card.jpg"}} alt="Projekt som söker boende">
+            <img src={{this.assetUrls.projektCard}} alt="Projekt som söker boende">
             <div class="card-content">
               <h3>Projekt som söker boende</h3>
             </div>
           </a>
 
           <a href="/tag/hitta-mark" class="info-card">
-            <img src={{theme-prefix "assets/mark-card.jpg"}} alt="Tillgänglig mark">
+            <img src={{this.assetUrls.markCard}} alt="Tillgänglig mark">
             <div class="card-content">
               <h3>Tillgänglig mark</h3>
             </div>
           </a>
 
           <a href="/u?order=likes_received&period=all" class="info-card">
-            <img src={{theme-prefix "assets/hitta-card.jpg"}} alt="Hitta varandra">
+            <img src={{this.assetUrls.hittaCard}} alt="Hitta varandra">
             <div class="card-content">
               <h3>Hitta varandra</h3>
             </div>
           </a>
 
           <a href="/invites/Bj4f1mYUD6" class="info-card">
-            <img src={{theme-prefix "assets/go-med-card.jpeg"}} alt="Gå med i rörelsen">
+            <img src={{this.assetUrls.goMedCard}} alt="Gå med i rörelsen">
             <div class="card-content">
               <h3>Gå med i rörelsen</h3>
             </div>
           </a>
 
           <a href="/docs?category=7" class="info-card">
-            <img src={{theme-prefix "assets/biblioteket-card.jpg"}} alt="Upptäck biblioteket">
+            <img src={{this.assetUrls.biblioteketCard}} alt="Upptäck biblioteket">
             <div class="card-content">
               <h3>Upptäck biblioteket</h3>
             </div>
