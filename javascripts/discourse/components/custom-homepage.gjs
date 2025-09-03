@@ -27,7 +27,6 @@ export default class CustomHomepage extends Component {
 
       <div class="main-content-grid">
         
-        {/* Column 1: Left side cards */}
         <aside class="left-column">
           <a href="/c/gemenskaper/5/l/map?order=created" class="info-card" id="map-card">
             <img src="" alt="Karta" />
