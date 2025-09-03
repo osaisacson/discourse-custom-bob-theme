@@ -29,8 +29,8 @@ export default class CustomHomepage extends Component {
         
         <aside class="left-column">
           <a href="/c/gemenskaper/5/l/map?order=created" class="info-card" id="map-card">
-            <img src="" alt="Karta" />
-          </a>
+ <img src={{asset "images/map-card.jpg"}} alt="Karta" />
+           </a>
           
           <a href="/tag/hitta-medlemmar" class="info-card">
             <img src="" alt="Projekt som söker boende" />
