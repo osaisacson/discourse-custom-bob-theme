@@ -5,5 +5,14 @@
   "theme_version": "0.0.1",
   "modifiers": {
     "custom_homepage": "true"
+  },
+  "assets": {
+    "biblioteket-card": "assets/images/biblioteket-card.jpg",
+    "go-med-card": "assets/images/go-med-card.jpg",
+    "hero-image": "assets/images/hero-image.jpg",
+    "hitta-card": "assets/images/hitta-card.jpg",
+    "map-card": "assets/images/map-card.jpg",
+    "mark-card": "assets/images/mark-card.jpg",
+    "projekt-card": "assets/images/projekt-card.jpg"
   }
 }

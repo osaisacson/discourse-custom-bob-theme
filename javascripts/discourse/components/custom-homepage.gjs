@@ -16,7 +16,7 @@ export default class CustomHomepage extends Component {
           </p>
         </div>
 
-        <div class="whos-online-container">
+     <div class="whos-online-container">
           <WhosOnline />
         </div>
 
@@ -30,39 +30,39 @@ export default class CustomHomepage extends Component {
         
         <aside class="left-column">
           <a href="/c/gemenskaper/5/l/map?order=created" class="info-card" id="map-card">
- <img src={{asset "images/map-card.jpg"}} alt="Karta" />
-           </a>
+            <img src={{theme-asset-url "map-card"}} alt="Karta" />
+          </a>
           
           <a href="/tag/hitta-medlemmar" class="info-card">
-            <img src="" alt="Projekt som söker boende" />
+            <img src={{theme-asset-url "projekt-card"}} alt="Projekt som söker boende" />
             <div class="card-content">
               <h3>Projekt som söker boende</h3>
             </div>
           </a>
 
           <a href="/tag/hitta-mark" class="info-card">
-            <img src="" alt="Tillgänglig mark" />
+            <img src={{theme-asset-url "mark-card"}} alt="Tillgänglig mark" />
             <div class="card-content">
               <h3>Tillgänglig mark</h3>
             </div>
           </a>
 
           <a href="/u?order=likes_received&period=all" class="info-card">
-            <img src="" alt="Hitta varandra" />
+            <img src={{theme-asset-url "hitta-card"}} alt="Hitta varandra" />
             <div class="card-content">
               <h3>Hitta varandra</h3>
             </div>
           </a>
 
           <a href="/invites/Bj4f1mYUD6" class="info-card">
-            <img src="" alt="Gå med i rörelsen" />
+            <img src={{theme-asset-url "go-med-card"}} alt="Gå med i rörelsen" />
             <div class="card-content">
               <h3>Gå med i rörelsen</h3>
             </div>
           </a>
 
           <a href="/docs?category=7" class="info-card">
-            <img src="" alt="Upptäck biblioteket" />
+            <img src={{theme-asset-url "biblioteket-card"}} alt="Upptäck biblioteket" />
             <div class="card-content">
               <h3>Upptäck biblioteket</h3>
             </div>
